@@ -1,0 +1,16 @@
+[project]
+name = "debate-arena"
+version = "0.1.0"
+tags = ["debate", "multi-turn", "multi-model", "tournament", "persuasion"]
+license = "Apache-2.0"
+description = "Two LLMs debate a topic until one concedes. Run a round-robin tournament across models to find the best debater."
+dependencies = [
+    "verifiers>=0.1.9",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+include = ["debate_arena.py", "run_tournament.py"]
