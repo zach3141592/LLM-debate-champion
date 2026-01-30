@@ -29,26 +29,6 @@ DEBATE_TOPICS = [
         "pro": "AI will create more jobs than it destroys",
         "con": "AI will destroy more jobs than it creates",
     },
-    {
-        "topic": "Social media does more harm than good",
-        "pro": "Social media does more harm than good",
-        "con": "Social media does more good than harm",
-    },
-    {
-        "topic": "Space exploration is worth the investment",
-        "pro": "Space exploration is worth the investment",
-        "con": "Space exploration is not worth the investment",
-    },
-    {
-        "topic": "Universal basic income should be implemented",
-        "pro": "Universal basic income should be implemented",
-        "con": "Universal basic income should not be implemented",
-    },
-    {
-        "topic": "Nuclear energy is the best solution to climate change",
-        "pro": "Nuclear energy is the best solution to climate change",
-        "con": "Nuclear energy is not the best solution to climate change",
-    },
 ]
 
 
