@@ -80,7 +80,7 @@ def build_dataset() -> Dataset:
 
 
 def load_environment(
-    opponent_model: str = "anthropic/claude-4.5-sonnet",
+    opponent_model: str = "anthropic/claude-sonnet-4.5",
     opponent_base_url: str = "https://api.pinference.ai/api/v1",
     opponent_api_key: Optional[str] = None,
     max_turns: int = 10,

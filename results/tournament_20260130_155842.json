@@ -1,0 +1,40 @@
+{
+  "results": [],
+  "leaderboard": {
+    "claude-sonnet": {
+      "wins": 0,
+      "losses": 0,
+      "draws": 0,
+      "total_reward": 0.0,
+      "debates": 0
+    },
+    "gemini-2.5-flash": {
+      "wins": 0,
+      "losses": 0,
+      "draws": 0,
+      "total_reward": 0.0,
+      "debates": 0
+    },
+    "qwen3-235b": {
+      "wins": 0,
+      "losses": 0,
+      "draws": 0,
+      "total_reward": 0.0,
+      "debates": 0
+    },
+    "gpt-oss-120b": {
+      "wins": 0,
+      "losses": 0,
+      "draws": 0,
+      "total_reward": 0.0,
+      "debates": 0
+    },
+    "kimi-k2": {
+      "wins": 0,
+      "losses": 0,
+      "draws": 0,
+      "total_reward": 0.0,
+      "debates": 0
+    }
+  }
+}

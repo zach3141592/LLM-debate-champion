@@ -1,0 +1,201 @@
+{
+  "results": [
+    {
+      "pro_model": "claude-sonnet",
+      "con_model": "gemini-2.5-flash",
+      "topic": "AI will create more jobs than it destroys",
+      "reward": 1.0,
+      "num_turns": 8.0,
+      "concession_metric": 1.0
+    },
+    {
+      "pro_model": "gemini-2.5-flash",
+      "con_model": "claude-sonnet",
+      "topic": "AI will create more jobs than it destroys",
+      "reward": 0.0,
+      "num_turns": 5.0,
+      "concession_metric": -1.0
+    },
+    {
+      "pro_model": "claude-sonnet",
+      "con_model": "qwen3-235b",
+      "topic": "AI will create more jobs than it destroys",
+      "reward": 1.0,
+      "num_turns": 1.0,
+      "concession_metric": 1.0
+    },
+    {
+      "pro_model": "qwen3-235b",
+      "con_model": "claude-sonnet",
+      "topic": "AI will create more jobs than it destroys",
+      "reward": 0.0,
+      "num_turns": 2.0,
+      "concession_metric": -1.0
+    },
+    {
+      "pro_model": "claude-sonnet",
+      "con_model": "gpt-oss-120b",
+      "topic": "AI will create more jobs than it destroys",
+      "reward": 1.0,
+      "num_turns": 8.0,
+      "concession_metric": 1.0
+    },
+    {
+      "pro_model": "gpt-oss-120b",
+      "con_model": "claude-sonnet",
+      "topic": "AI will create more jobs than it destroys",
+      "reward": 1.0,
+      "num_turns": 4.0,
+      "concession_metric": 1.0
+    },
+    {
+      "pro_model": "claude-sonnet",
+      "con_model": "kimi-k2",
+      "topic": "AI will create more jobs than it destroys",
+      "reward": 1.0,
+      "num_turns": 4.0,
+      "concession_metric": 1.0
+    },
+    {
+      "pro_model": "kimi-k2",
+      "con_model": "claude-sonnet",
+      "topic": "AI will create more jobs than it destroys",
+      "reward": 1.0,
+      "num_turns": 3.0,
+      "concession_metric": 1.0
+    },
+    {
+      "pro_model": "gemini-2.5-flash",
+      "con_model": "qwen3-235b",
+      "topic": "AI will create more jobs than it destroys",
+      "reward": 1.0,
+      "num_turns": 3.0,
+      "concession_metric": 1.0
+    },
+    {
+      "pro_model": "qwen3-235b",
+      "con_model": "gemini-2.5-flash",
+      "topic": "AI will create more jobs than it destroys",
+      "reward": 0.0,
+      "num_turns": 2.0,
+      "concession_metric": -1.0
+    },
+    {
+      "pro_model": "gemini-2.5-flash",
+      "con_model": "gpt-oss-120b",
+      "topic": "AI will create more jobs than it destroys",
+      "reward": 0.5,
+      "num_turns": 10.0,
+      "concession_metric": 0.0
+    },
+    {
+      "pro_model": "gpt-oss-120b",
+      "con_model": "gemini-2.5-flash",
+      "topic": "AI will create more jobs than it destroys",
+      "reward": 0.0,
+      "num_turns": 8.0,
+      "concession_metric": -1.0
+    },
+    {
+      "pro_model": "gemini-2.5-flash",
+      "con_model": "kimi-k2",
+      "topic": "AI will create more jobs than it destroys",
+      "reward": 0.0,
+      "num_turns": 2.0,
+      "concession_metric": -1.0
+    },
+    {
+      "pro_model": "kimi-k2",
+      "con_model": "gemini-2.5-flash",
+      "topic": "AI will create more jobs than it destroys",
+      "reward": 0.0,
+      "num_turns": 6.0,
+      "concession_metric": -1.0
+    },
+    {
+      "pro_model": "qwen3-235b",
+      "con_model": "gpt-oss-120b",
+      "topic": "AI will create more jobs than it destroys",
+      "reward": 0.0,
+      "num_turns": 4.0,
+      "concession_metric": -1.0
+    },
+    {
+      "pro_model": "gpt-oss-120b",
+      "con_model": "qwen3-235b",
+      "topic": "AI will create more jobs than it destroys",
+      "reward": 1.0,
+      "num_turns": 3.0,
+      "concession_metric": 1.0
+    },
+    {
+      "pro_model": "qwen3-235b",
+      "con_model": "kimi-k2",
+      "topic": "AI will create more jobs than it destroys",
+      "reward": 0.0,
+      "num_turns": 2.0,
+      "concession_metric": -1.0
+    },
+    {
+      "pro_model": "kimi-k2",
+      "con_model": "qwen3-235b",
+      "topic": "AI will create more jobs than it destroys",
+      "reward": 1.0,
+      "num_turns": 3.0,
+      "concession_metric": 1.0
+    },
+    {
+      "pro_model": "gpt-oss-120b",
+      "con_model": "kimi-k2",
+      "topic": "AI will create more jobs than it destroys",
+      "reward": 1.0,
+      "num_turns": 5.0,
+      "concession_metric": 1.0
+    },
+    {
+      "pro_model": "kimi-k2",
+      "con_model": "gpt-oss-120b",
+      "topic": "AI will create more jobs than it destroys",
+      "reward": 0.0,
+      "num_turns": 6.0,
+      "concession_metric": -1.0
+    }
+  ],
+  "leaderboard": {
+    "claude-sonnet": {
+      "wins": 6,
+      "losses": 2,
+      "draws": 0,
+      "total_reward": 6.0,
+      "debates": 8
+    },
+    "gemini-2.5-flash": {
+      "wins": 4,
+      "losses": 3,
+      "draws": 1,
+      "total_reward": 4.5,
+      "debates": 8
+    },
+    "qwen3-235b": {
+      "wins": 0,
+      "losses": 8,
+      "draws": 0,
+      "total_reward": 0.0,
+      "debates": 8
+    },
+    "gpt-oss-120b": {
+      "wins": 5,
+      "losses": 2,
+      "draws": 1,
+      "total_reward": 5.5,
+      "debates": 8
+    },
+    "kimi-k2": {
+      "wins": 4,
+      "losses": 4,
+      "draws": 0,
+      "total_reward": 4.0,
+      "debates": 8
+    }
+  }
+}

@@ -25,7 +25,7 @@ PRIME_API_BASE = "https://api.pinference.ai/api/v1"
 MODELS = [
     {
         "name": "claude-sonnet",
-        "model": "anthropic/claude-4.5-sonnet",
+        "model": "anthropic/claude-sonnet-4.5",
     },
     {
         "name": "gemini-2.5-flash",
@@ -78,14 +78,14 @@ async def run_matchup(
     )
 
     matchup_results = []
-    for output in results.outputs:
+    for output in results["outputs"]:
         matchup_results.append({
             "pro_model": pro_cfg["name"],
             "con_model": con_cfg["name"],
-            "topic": output.input.get("answer", ""),
-            "reward": output.reward,
-            "num_turns": output.metrics.get("num_turns", 0),
-            "concession_metric": output.metrics.get("concession_metric", 0),
+            "topic": output.get("answer", ""),
+            "reward": output["reward"],
+            "num_turns": output.get("metrics", {}).get("num_turns", 0),
+            "concession_metric": output.get("metrics", {}).get("concession_metric", 0),
         })
     return matchup_results
 
@@ -98,19 +98,24 @@ async def run_tournament():
     print(f"Models: {[m['name'] for m in MODELS]}")
     print()
 
-    for i, (a, b) in enumerate(pairings):
+    # Build all matchup tasks (both directions per pairing)
+    tasks = []
+    for a, b in pairings:
         model_a = MODELS[a]
         model_b = MODELS[b]
+        print(f"  Queuing: {model_a['name']} (pro) vs {model_b['name']} (con)")
+        tasks.append(run_matchup(model_a, model_b))
+        print(f"  Queuing: {model_b['name']} (pro) vs {model_a['name']} (con)")
+        tasks.append(run_matchup(model_b, model_a))
 
-        # Direction 1: A=pro, B=con
-        print(f"[{i+1}/{len(pairings)}] {model_a['name']} (pro) vs {model_b['name']} (con)")
-        results_1 = await run_matchup(model_a, model_b)
-        all_results.extend(results_1)
+    print(f"\nRunning {len(tasks)} debates in parallel...")
+    results_list = await asyncio.gather(*tasks, return_exceptions=True)
 
-        # Direction 2: B=pro, A=con
-        print(f"[{i+1}/{len(pairings)}] {model_b['name']} (pro) vs {model_a['name']} (con)")
-        results_2 = await run_matchup(model_b, model_a)
-        all_results.extend(results_2)
+    for result in results_list:
+        if isinstance(result, Exception):
+            print(f"  Matchup failed: {result}")
+        else:
+            all_results.extend(result)
 
     # Aggregate leaderboard
     stats = {}
